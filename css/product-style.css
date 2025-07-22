@@ -1,0 +1,438 @@
+/*----------------------------------------product page----------------------------------------*/
+* {
+    box-sizing: border-box;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+body{
+    font-family: sans-serif;
+    background-image: url(../images/Screenshot\ 2024-03-28\ 024134.png);
+    padding-top: 100px;
+    font-size: 162%;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    color: white;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px rgb(247,85,13);
+    padding: 45px;
+    margin: 15px 0;
+    width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "images info"
+    "images description";
+    grid-gap: 35px;
+
+}
+
+
+/* --------------------Header-------------------- */
+.line {
+    height: 1px;
+    background-color: rgb(247, 85, 31);
+}
+
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+/*HEADER*/
+
+header {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 62.5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(13, 13, 12);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header img {
+    width: 30px;
+
+}
+
+/*NAVIGATION BAR*/
+
+header .logotxt {
+    font-size: 2rem;
+    font-family: 'space armor';
+    color: rgb(247, 85, 31);
+    margin-right: 220px;
+
+}
+
+
+header .navbar a {
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    color: rgb(247, 85, 31);
+
+}
+
+header .navbar a:hover {
+    color: #ddd;
+    transform: translateX(-3px) translateY(-5px);
+}
+
+/*DROPDOWN*/
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropbtn {
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    color: rgb(247, 85, 31);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+}
+
+
+.dropdown:hover .dropbtn {
+    color: #ddd;
+    transform: translateX(-3px) translateY(-5px);
+}
+.dropdown:hover{
+    transition: 1000ms;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(13, 13, 12);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    border: rgb(247, 85, 31) 1px solid;
+}
+
+.dropdown-content-element {
+    float: none;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    height: 50px;
+    padding-top: 10px;
+}
+.dropdown-content-element a{
+    display: inline-block;
+    padding-top: 10px;
+    width: 100%;
+    height: 50px;
+}
+
+.dropdown-content-element:hover {
+    background-color: rgb(247, 85, 31);
+    transition: 500ms;
+    color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: azure;
+}
+
+/*OTHER LINKS IN NAVBAR*/
+
+header .navbar .other {
+    color: rgb(247, 85, 31);
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+
+header .navbar .other a {
+    font-size: 1.5rem;
+}
+
+
+html {
+    /* font-size: 62.5%; */
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+/*---------------images of product---------------*/
+
+.box .images {
+    grid-area: images;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "active active active"
+    "idle idle idle";
+    grid-gap: 5px;
+}
+
+.box .images img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    /* opacity: 0; */
+}
+
+.box .images .img-holder-active {
+    grid-area: active;
+}
+.img-holder-active:hover {
+    transform: scale(1.4);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.box .images .img-holder:hover {
+    opacity: 0.95;
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+/*------------name of product--------------*/
+
+.box .basic-info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*-------------------rate-------------------*/
+
+.box .basic-info .rate {
+    color: rgb(247,85,13);
+}
+
+/*-----------------salary-----------------*/
+
+.box .basic-info span {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+/*---------------options------------------*/
+
+.box .basic-info .options a {
+    color:white;
+    background-color: rgb(247,85,13);
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.box .basic-info .options a:hover {
+    background-color: black;
+}
+
+
+/*-------------description------------*/
+
+.box .description {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.box .description p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+/*--------------features product--------------*/
+
+.box .description .features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.box .description .features i {
+    margin-right: 5px;
+}
+
+.box .description .features .fa-circle-check {
+    color: white;
+}
+
+.box .description .features .fa-circle-xmark {
+    color: white;
+}
+
+/*---------------box---------------*/
+
+@media (max-width: 991px) {
+    .box {
+        width: 750px;
+        grid-template-areas: 
+        "info info"
+        "images description";
+    }
+    .box .basic-info .options a {
+        padding: 8.5px 12px;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 769px) {
+    .box .basic-info span {
+        position: absolute;
+        align-self: flex-end;
+    }
+    .box .basic-info .options {
+        position: absolute;
+        align-self: flex-end;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 600px;
+        grid-template-areas: 
+        "images info"
+        "description description";
+    }
+    .box .images {
+        gap: 3px;
+    }
+    .box .images .img-holder img {
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 640px) {
+    .box {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 35px;
+        margin: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "images"
+        "info"
+        "description";
+    }
+}
+
+.footer {
+    padding: 80px 13% 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+    background: url(../images/footer.png);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 5;
+}
+
+.footercontent h4 {
+    color: rgb(247, 85, 31);
+    margin-bottom: 1.5rem;
+    font-size: 15px;
+    font-family: 'space armor';
+}
+
+.footercontent img {
+    width: 70%;
+}
+
+.footercontent li {
+    margin-bottom: 16px;
+    list-style-type: none;
+}
+
+.footercontent li a {
+    display: block;
+    color: #ddd;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+    padding-left: 5px;
+}
+
+.footercontent li a:hover {
+    transform: translateY(-3px) translateX(-5px);
+    color: rgb(247, 85, 31);
+}
+
+.footercontent .caption {
+    color: #ddd;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.footercontent .copyrights {
+    color: dimgray;
+    font-size: 12px;
+    line-height: 10px;
+    margin: 20px 0;
+}
+
+.icons a {
+    display: inline-block;
+    font-size: 22px;
+    color: rgb(247, 85, 31);
+    margin-right: 17px;
+    transition: all .40s ease;
+}
+
+.icons a:hover {
+    color: #ddd;
+    transform: translateY(-3px);
+}
+.line {
+    height: 1px;
+    background-color: rgb(247, 85, 31);
+}

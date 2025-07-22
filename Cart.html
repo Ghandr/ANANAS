@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ananas gaming</title>
+    <link rel="stylesheet" href="css/Cart & Check out.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="images/icon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body class="cart">
+    <header>
+        <a href="index.html" class="logop"><img src="images/logo.png" alt="LOGO"></a>
+        <a href="index.html" class="logotxt">ananas gaming</a>
+
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn"><a href="all products.html">PRODUCTS</a><i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-content-element" style="border-top-left-radius: 10px;border-top-right-radius: 10px;"><a href="keyboars category.html">KEYBOARDS</a></div>
+                    <div class="line"></div>
+                    <div class="dropdown-content-element"><a href="mice category.html">MICE</a></div>
+                    <div class="line"></div>
+                    <div class="dropdown-content-element" style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"><a href="Headsets category.html">HEADSETS</a></div>
+                </div>
+            </div>
+            <div class="other">
+                <a href="about.html" target="_blank">ABOUT</a>
+                <a href="Cart.html">CART</a>
+                <a href="#">CONTACT US</a>
+                <a href="login.html">LOGIN</a>
+            </div>
+        </nav>
+    </header>
+
+    <form>
+        <!-- Cart Table -->
+        <div class="container">
+            <table id="tbl1">
+                <thead>
+                    <tr>
+                        <th style="text-align: left;" colspan="2">Product</th>
+                        <th style="text-align: center;">Price</th>
+                        <th style="text-align: center;">Quantity</th>
+                        <th style="text-align: right;">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="productTd">
+                            <div class="product">
+                                <div class="productImgCell">
+                                    <img src="images/product.png"
+                                        alt="">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="productNameTd">
+                            <div class="productNameCell">
+                                <p>Wired 60% RGB Backlight Black Mechanical Keyboard k630</p>
+                                <div class="productCellRemove">
+                                    <button type="button">REMOVE</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="priceTd">
+                            <div class="priceCell">
+                                <p>2112 EG</p>
+                            </div>
+                        </td>
+                        <td class="quantityTd">
+                            <div class="quantityCell">
+                                <label for="quantity"></label>
+                                <input type="number" id="quantity" min="1">
+                            </div>
+                        </td>
+                        <td class="totalTd">
+                            <div class="totalCell">
+                                <p>2112 EG</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="productTd">
+                            <div class="product">
+                                <div class="productImgCell">
+                                    <img src="images/product.png"
+                                        alt="">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="productNameTd">
+                            <div class="productNameCell">
+                                <p>Wired 60% RGB Backlight Black Mechanical Keyboard k630</p>
+                                <div class="productCellRemove">
+                                    <button type="button">REMOVE</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="priceTd">
+                            <div class="priceCell">
+                                <p>2112 EG</p>
+                            </div>
+                        </td>
+                        <td class="quantityTd">
+                            <div class="quantityCell">
+                                <label for="quantity"></label>
+                                <input type="number" name="product_quantity" id="quantity" min="1">
+                            </div>
+                        </td>
+                        <td class="totalTd">
+                            <div class="totalCell">
+                                <p>2112 EG</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Proceed To Checkout Container -->
+        <footer class="fot">
+            <div class="container">
+                <div class="fot-container">
+                    <div class="fot-total">
+                        <span class="totalSpan">Total</span>
+                        <span class="moneySpan">
+                            <span>
+                                4224 EG
+                            </span>
+                        </span>
+                    </div>
+                    <div class="fot-note">
+                        <p>Shipping & Taxes Calculated At Checkout</p>
+                    </div>
+                    <a href="index.html">
+                        <button class="home-btn" type="button">
+                            Continue Shopping
+                        </button>
+                    </a>
+                    <button class="update-btn" type="button">
+                        Update Cart
+                    </button>
+                    <a href="Checkout.html">
+                        <button class="checkout-btn" type="button">
+                            Proceed To Check out
+                        </button>
+                    </a>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+        </footer>
+    </form>
+    <div class="line"></div>
+    <section class="footer">
+        <div class="footercontent">
+            <img src="images/logotran.png" alt="">
+            <p class="caption">In gaming, we trust.</p>
+            <p class="copyrights">©2024, Ananasgaming.com. All rights reserved.</p>
+            <div class="icons">
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-tiktok' ></i></a>
+            </div>
+        </div>
+    
+        <div class="footercontent">
+            <h4>Quick Links</h4>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signUp.html">Signup</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+        </div>
+    
+        <div class="footercontent">
+            <h4>Categories</h4>
+            <li><a href="keyboars category.html">Keyboards</a></li>
+            <li><a href="keyboars category.html">Mice</a></li>
+            <li><a href="Headsets category.html">Headsets</a></li>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    background-image: url(../images/Screenshot\ 2024-03-28\ 024134.png);
+
+}
+
+.clear-fix{
+    clear: both;
+}
+
+
+/* Header */
+.line {
+    height: 1px;
+    background-color: rgb(247, 85, 31);
+}
+
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(13, 13, 12);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header img {
+    width: 30px;
+
+}
+
+/*NAVIGATION BAR*/
+
+header .logotxt {
+    font-size: 2rem;
+    font-family: 'space armor';
+    color: rgb(247, 85, 31);
+    margin-right: 220px;
+
+}
+
+
+header .navbar a {
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    color: rgb(247, 85, 31);
+
+}
+
+header .navbar a:hover {
+    color: #ddd;
+    transform: translateX(-3px) translateY(-5px);
+}
+
+/*DROPDOWN*/
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropbtn {
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    color: rgb(247, 85, 31);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+}
+
+
+.dropdown:hover .dropbtn {
+    color: #ddd;
+    transform: translateX(-3px) translateY(-5px);
+}
+.dropdown:hover{
+    transition: 1000ms;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(13, 13, 12);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    border: rgb(247, 85, 31) 1px solid;
+}
+
+.dropdown-content-element {
+    float: none;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    height: 50px;
+    padding-top: 10px;
+}
+.dropdown-content-element a{
+    display: inline-block;
+    padding-top: 10px;
+    width: 100%;
+    height: 50px;
+}
+
+.dropdown-content-element:hover {
+    background-color: rgb(247, 85, 31);
+    transition: 500ms;
+    color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: azure;
+}
+
+/*OTHER LINKS IN NAVBAR*/
+
+header .navbar .other {
+    color: rgb(247, 85, 31);
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+
+header .navbar .other a {
+    font-size: 1.5rem;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+
+.account{
+    margin-top: 130px;
+    font-size: 162.5%;
+}
+
+.container {
+    max-width: 400px;
+    height: 500px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px 1px rgb(247, 85, 31);
+}
+
+.account h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-picture {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    text-align: center;
+    float: left;
+}
+.profile-picture img{
+    width: 100%;
+    height: 100%;
+}
+.profile-picture input{
+    border-radius: 50%;
+    color: white;
+}
+
+.account button {
+    margin-top: 60px;
+    margin-left: 30px;
+    padding: 5px 10px;
+    background-color: orangered;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    float: left;
+}
+
+
+
+.account button:hover {
+    background-color: rgb(173, 59, 22);
+}
+
+.box {
+    background-color: white;
+    color: black;
+    height: fit-content;
+    width: 300px;
+    padding: 5px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.account h2 {
+    margin: 15px;
+}
+
+.box p {
+    height: 30px;
+    width: 100%;
+    margin: 0;
+}
+
+/* Footer */
+
+.footer {
+    padding: 80px 13% 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+    background: url(../images/footer.png);
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footercontent h4 {
+    color: rgb(247, 85, 31);
+    margin-bottom: 1.5rem;
+    font-size: 15px;
+    font-family: 'space armor';
+}
+
+.footercontent img {
+    width: 70%;
+}
+
+.footercontent li {
+    margin-bottom: 16px;
+    list-style-type: none;
+}
+
+.footercontent li a {
+    display: block;
+    color: #ddd;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+    padding-left: 5px;
+}
+
+.footercontent li a:hover {
+    transform: translateY(-3px) translateX(-5px);
+    color: rgb(247, 85, 31);
+}
+
+.footercontent .caption {
+    color: #ddd;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.footercontent .copyrights {
+    color: dimgray;
+    font-size: 12px;
+    line-height: 10px;
+    margin: 20px 0;
+}
+
+.icons a {
+    display: inline-block;
+    font-size: 22px;
+    color: rgb(247, 85, 31);
+    margin-right: 17px;
+    transition: all .40s ease;
+}
+
+.icons a:hover {
+    color: #ddd;
+    transform: translateY(-3px);
+}
+.line {
+    height: 1px;
+    background-color: rgb(247, 85, 31);
+}

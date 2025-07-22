@@ -1,0 +1,157 @@
+<?php
+require_once 'Connection.php';
+
+$sql = "SELECT * FROM products";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<div class='product'>";
+        echo "<h3>" . $row["name"] . "</h3>";
+        echo "<p>" . $row["description"] . "</p>";
+        echo "<p>Price: $" . $row["price"] . "</p>";
+        echo "<button onclick='addToCart(" . $row["id"] . ")'>Add to Cart</button>";
+        echo "</div>";
+    }
+} else {
+    echo "No products found.";
+}
+
+$conn->close();
+?>
+
+<!-------------------------------------------product page------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/product-style.css">
+    <link rel="shortcut icon" href="images/icon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Product Details</title>
+</head>
+
+<body>
+    <!------------------------------------- Header -------------------------------------->
+    <header>
+        <a href="index.html" class="logop"><img src="images/logo.png" alt="LOGO"></a>
+        <a href="index.html" class="logotxt">ananas gaming</a>
+
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn"><a href="all products.html">PRODUCTS</a><i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-content-element"
+                        style="border-top-left-radius: 10px;border-top-right-radius: 10px;"><a
+                            href="keyboars category.html">KEYBOARDS</a></div>
+                    <div class="line"></div>
+                    <div class="dropdown-content-element"><a href="mice category.html">MICE</a></div>
+                    <div class="line"></div>
+                    <div class="dropdown-content-element"
+                        style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"><a
+                            href="Headsets category.html">HEADSETS</a></div>
+                </div>
+            </div>
+            <div class="other">
+                <a href="about.html" target="_blank">ABOUT</a>
+                <a href="Cart.html">CART</a>
+                <a href="#">CONTACT US</a>
+                <a href="login.html">LOGIN</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!--------------------------------------- Body ------------------------------>
+    <div class="container">
+        <div class="box">
+            <!------------------images of product---------------->
+            <div class="images">
+                <div class="img-holder-active">
+                    <img src="images/prod1sqr.png">
+                </div>
+                <div class="img-holder">
+                    <img src="images/prod2sqr.png">
+                </div>
+                <div class="img-holder">
+                    <img src="images/wired60_gamingkeyboard_884fc20e-3866-4e01-a0d9-53a0505a26cd.webp">
+                </div>
+                <div class="img-holder">
+                    <img src="images/product_with_swithc.webp">
+                </div>
+            </div>
+
+            <div class="basic-info">
+                <!-------------------name of product---------------->
+                <h1>Wierd 60% RGB Backlight Mechanical Keyboard</h1>
+                <!------------------------rate---------------------->
+                <div class="rate">
+                    <i class="filled fas fa-star">&starf;</i>
+                    <i class="filled fas fa-star">&starf;</i>
+                    <i class="filled fas fa-star">&starf;</i>
+                    <i class="filled fas fa-star">&starf;</i>
+                    <i class="filled fas fa-star">&star;</i>
+                    <i class="filled fas fa-star">45 reviews</i>
+                </div>
+                <!-------------------------salary-------------------------->
+                <span>$40.00</span>
+                <!---------------------------options------------------------>
+                <div class="options">
+                    <a href="#">Buy It Now</a>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <!---------------------description product--------------------->
+            <div class="description">
+                <p>60% LAYOUT IN WIRED<br>
+                    Brand New Ananas 60% design in wired-only mode due to popular demand. 61 anti-ghosting keys for
+                    ultra-compact and minimalistic design. Frees up precious desk space for less clutter.</p>
+                <!------------------------ features product------------------->
+                <ul class="features">
+                    <li><i class="fa-solid fa-circle-check"></i>Speed Is Everything</li>
+                    <li><i class="fa-solid fa-circle-check"></i>Rapid Trigger Tech</li>
+                    <li><i class="fa-solid fa-circle-xmark"></i>8K Hyper-Polling</li>
+                    <li><i class="fa-solid fa-circle-xmark"></i>2 Actions In 1 Tap</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->
+
+    <div class="line"></div>
+    <section class="footer">
+        <div class="footercontent">
+            <img src="images/logotran.png" alt="">
+            <p class="caption">In gaming, we trust.</p>
+            <p class="copyrights">©2024, Ananasgaming.com. All rights reserved.</p>
+            <div class="icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+        </div>
+
+        <div class="footercontent">
+            <h4>Quick Links</h4>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signUp.html">Signup</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+        </div>
+
+        <div class="footercontent">
+            <h4>Categories</h4>
+            <li><a href="keyboars category.html">Keyboards</a></li>
+            <li><a href="keyboars category.html">Mice</a></li>
+            <li><a href="Headsets category.html">Headsets</a></li>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+:root {
+    --orange: #F75123
+}
+
+@font-face {
+    font-family: 'space armor';
+    src: url('SpaceArmor-vmlv4.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#newfont {
+    font-family: 'space armor';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+body {
+    text-decoration: none;
+    background-color: rgb(13, 13, 12);
+}
+
+section {
+    padding: 18rem 9%;
+}
+
+.line {
+    height: 1px;
+    background-color: rgb(247, 85, 31);
+}
+
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+/*HEADER*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(13, 13, 12);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header img {
+    width: 30px;
+
+}
+
+/*NAVIGATION BAR*/
+
+header .logotxt {
+    font-size: 2rem;
+    font-family: 'space armor';
+    color: rgb(247, 85, 31);
+    margin-right: 220px;
+
+}
+
+
+header .navbar a {
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    color: rgb(247, 85, 31);
+
+}
+
+header .navbar a:hover {
+    color: #ddd;
+    transform: translateX(-3px) translateY(-5px);
+}
+
+/*DROPDOWN*/
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropbtn {
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    color: rgb(247, 85, 31);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+}
+
+
+.dropdown:hover .dropbtn {
+    color: #ddd;
+    transform: translateX(-3px) translateY(-5px);
+}
+.dropdown:hover{
+    transition: 1000ms;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(13, 13, 12);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    border: rgb(247, 85, 31) 1px solid;
+}
+
+.dropdown-content-element {
+    float: none;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    height: 50px;
+    padding-top: 10px;
+}
+.dropdown-content-element a{
+    display: inline-block;
+    padding-top: 10px;
+    width: 100%;
+    height: 50px;
+}
+
+.dropdown-content-element:hover {
+    background-color: rgb(247, 85, 31);
+    transition: 500ms;
+    color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: azure;
+}
+
+/*OTHER LINKS IN NAVBAR*/
+
+header .navbar .other {
+    color: rgb(247, 85, 31);
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+
+header .navbar .other a {
+    font-size: 1.5rem;
+}
+
+
+
+/*ABOUT*/
+
+.about {
+    padding-top: 200px;
+    padding-left: 100px;
+}
+
+.about h4 {
+    font-size: 3rem;
+    font-family: 'space armor';
+    color: rgb(247, 85, 31);
+}
+
+.about .abouttext {
+    font-size: 2.3rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #ddd;
+    line-height: 2;
+}
+
+.about .signature {
+    font-size: 1.5rem;
+    font-family: 'space armor';
+    line-height: 5;
+    color: rgb(247, 85, 31);
+    margin-left: 5rem;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    padding: 80px 13% 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+    background: url(../images/footer.png);
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.footercontent h4 {
+    color: rgb(247, 85, 31);
+    margin-bottom: 1.5rem;
+    font-size: 15px;
+    font-family: 'space armor';
+}
+
+.footercontent img {
+    width: 70%;
+}
+
+.footercontent li {
+    margin-bottom: 16px;
+}
+
+.footercontent li a {
+    display: block;
+    color: #ddd;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+    padding-left: 5px;
+}
+
+.footercontent li a:hover {
+    transform: translateY(-3px) translateX(-5px);
+    color: rgb(247, 85, 31);
+}
+
+.footercontent .caption {
+    color: #ddd;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.footercontent .copyrights {
+    color: dimgray;
+    font-size: 12px;
+    line-height: 10px;
+    margin: 20px 0;
+}
+
+.icons a {
+    display: inline-block;
+    font-size: 22px;
+    color: rgb(247, 85, 31);
+    margin-right: 17px;
+    transition: all .40s ease;
+}
+
+.icons a:hover {
+    color: #ddd;
+    transform: translateY(-3px);
+}
